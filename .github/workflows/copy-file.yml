@@ -1,0 +1,31 @@
+name: Copy File Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  copy-file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Copy File
+        run: |
+          # Specify the file and source/destination directories
+          source_file="Folder1/file1.txt"
+          destination_folder="Folder2/"
+
+          # Copy the file to the destination folder
+          cp "${source_file}" "${destination_folder}"
+
+      - name: Commit Changes
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add .
+          git commit -m "Copy file using GitHub Actions"
+          git push
