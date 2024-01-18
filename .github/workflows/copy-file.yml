@@ -15,7 +15,7 @@ jobs:
 
       - name: Copy File
         run: |
-          # Specify the file and source/destination directories
+          # file and source/destination directories
           source_file="Folder1/file1.txt"
           destination_folder="folder2/"
 
