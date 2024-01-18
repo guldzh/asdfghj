@@ -17,7 +17,7 @@ jobs:
         run: |
           # Specify the file and source/destination directories
           source_file="Folder1/file1.txt"
-          destination_folder="Folder2/"
+          destination_folder="folder2/"
 
           # Copy the file to the destination folder
           cp "${source_file}" "${destination_folder}"
