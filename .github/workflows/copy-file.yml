@@ -20,11 +20,3 @@ jobs:
 
           # Copy the file to the destination folder
           cp "${source_file}" "${destination_folder}"
-
-      - name: Commit Changes
-        run: |
-          git config --local user.email "gdzhorobek@github.com"
-          git config --local user.name "guldzh"
-          git add .
-          git commit -m "Copy file using GitHub Actions"
-          git push https://github.com/guldzh/asdfghj.git HEAD:${{ github.ref }}
