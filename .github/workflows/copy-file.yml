@@ -2,9 +2,8 @@ name: Copy File Workflow
 
 on:
   push:
-    branches:
-      - main
-
+    branches: [ "main" ]
+    
 jobs:
   copy-file:
     runs-on: ubuntu-latest
