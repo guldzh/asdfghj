@@ -23,8 +23,8 @@ jobs:
 
       - name: Commit Changes
         run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
+          git config --local user.email "gdzhorobek@github.com"
+          git config --local user.name "guldzh"
           git add .
           git commit -m "Copy file using GitHub Actions"
-          git push
+          git push https://github.com/guldzh/asdfghj.git HEAD:${{ github.ref }}
